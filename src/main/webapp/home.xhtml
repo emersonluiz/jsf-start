@@ -1,0 +1,19 @@
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:p="http://primefaces.org/ui">
+
+	<ui:composition template="/template/interna.xhtml">
+		<ui:define name="content">
+			<p:panel header="Home" style="height: 300px">
+				<h:form>
+					<p:commandLink action="#{personBean.listing()}">
+						<p:graphicImage value="./resource/person.jpg" height="82px" width="82px" />
+					</p:commandLink>
+				</h:form>
+			</p:panel>
+		</ui:define>
+	</ui:composition>
+
+</html>

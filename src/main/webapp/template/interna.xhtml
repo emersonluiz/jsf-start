@@ -1,0 +1,39 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+          "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:p="http://primefaces.org/ui">
+<h:head>
+	<f:facet name="first">
+        <meta http-equiv="X-UA-Compatible" content="edge, chrome=1" />
+        <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
+		<meta http-equiv="Pragma" content="no-cache" />
+		<meta http-equiv="Expires" content="-1" />
+    </f:facet>
+	<title>Sistema de Pessoas</title>
+	<link rel="StyleSheet" type="text/css" href="./css/style.css" media="screen" />
+</h:head>
+<h:body>
+
+	<div id="header" style="height: 100px;" class="gradient">
+		<div id="header" class="gradient">
+			<h1>Sistema de Cadastro de Pessoas</h1>
+		</div>
+	</div>
+	<div id="menu" style="background: #CCC; height: 47px;">
+		<p:menubar>
+			<p:menuitem value="Home" url="home.xhtml" icon="ui-icon-document" />
+			<p:submenu label="Pessoa" icon="ui-icon-document">
+	            <p:menuitem value="Listagem" url="listagem.xhtml" />
+	            <p:menuitem value="Cadastro" url="cadastro.xhtml" />
+	        </p:submenu>
+        </p:menubar>
+	</div>
+	<div style="background: #CCC; padding: 10px; padding-top: 20px"><ui:insert name="content"></ui:insert></div>
+	<div id="footer" style="height: 30px;" class="gradient">
+		<ui:insert name="footer"></ui:insert>
+	</div>
+</h:body>
+</html>

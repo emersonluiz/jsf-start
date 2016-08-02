@@ -1,0 +1,31 @@
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:p="http://primefaces.org/ui">
+
+	<ui:composition template="/template/interna.xhtml">
+		<ui:define name="content">
+			<p:panel header="Listagem de Pessoa">
+				<h:form id="listPerson">
+			        <p:dataTable var="person" value="#{personBean.persons}">
+						<p:column headerText="Nome" style="text-align: left">
+							<h:outputText value="#{person.name}"></h:outputText>
+						</p:column>
+						<p:column headerText="Data Nascimento" width="28%" style="text-align: left">
+							<h:outputText value="#{person.date}">
+								<f:convertDateTime pattern="dd/MM/yyyy"/>
+							</h:outputText>
+						</p:column>
+						<p:column headerText="Ação" width="15%" style="text-align: center">
+							<p:commandButton icon="ui-icon-pencil" action="#{personBean.loadEdit(person.id)}"></p:commandButton>
+							<p:spacer width="10" />
+							<p:commandButton icon="ui-icon-trash" action="#{personBean.delete(person.id)}"></p:commandButton>
+						</p:column>
+					</p:dataTable>
+				</h:form>
+			</p:panel>
+		</ui:define>
+	</ui:composition>
+
+</html>
